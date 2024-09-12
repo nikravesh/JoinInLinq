@@ -20,6 +20,4 @@ Imagine you have two collection like Student and Course, Every student has one o
 
 # Output Sample
 
-| Image    |
-| :------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| cart-api | [![Build Cart Api](https://github.com/nikravesh/JoinInLinq/blob/main/LeftouterJoinSimulation.Output/OutputSample/result.png)] |
+![Build Cart Api](https://github.com/nikravesh/JoinInLinq/blob/main/LeftouterJoinSimulation.Output/OutputSample/result.png)
