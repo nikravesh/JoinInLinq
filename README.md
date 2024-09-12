@@ -12,11 +12,11 @@ we can simulation left outer join with 'GroupJoin' in this sample I clarify this
 
 # How
 
-How are we simulate left outer join with 'GroupJoin' ?
+How do we simulate left outer join with 'GroupJoin'?
 I want to explain this question.
 This simulation is very simple but very useful, when we have 2 collection and need join them, join is important concept.
 
-Imagine you have two collection like Student and Course, Every student has one or more course, and you want to show list of student courses and also show every student is who does not have any courses, so you must use left outer join.
+Imagine you have two collections Student and Course, Every student has one or more courses, and you want to show a list of student courses and show every student who does not have any courses, so you must use the left outer join.
 
 # Output Sample
 
@@ -24,6 +24,6 @@ Imagine you have two collection like Student and Course, Every student has one o
 
 # How To Run
 
-This is a very sample console project, clone project and run by two way :
-Open the project in Visual studio and press F5
-or with .Net cli, open CMD and go to project folder and execute this command 'dotnet run' and press enter
+This is a very simple console project, clone the project, and run in two way :
+Open the project in Visual Studio and press F5
+or with .Net cli, open CMD go to the project folder, execute this command 'dotnet run' and press enter
