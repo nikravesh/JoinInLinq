@@ -21,3 +21,9 @@ Imagine you have two collection like Student and Course, Every student has one o
 # Output Sample
 
 ![Build Cart Api](https://github.com/nikravesh/JoinInLinq/blob/main/LeftouterJoinSimulation.Output/OutputSample/result.png)
+
+# How To Run
+
+This is a very sample console project, clone project and run by two way :
+Open the project in Visual studio and press F5
+or with .Net cli, open CMD and go to project folder and execute this command 'dotnet run' and press enter
