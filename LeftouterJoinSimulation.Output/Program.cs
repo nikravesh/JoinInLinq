@@ -13,13 +13,13 @@ foreach (StudentCourse studentCourseItem in studentCourse)
     Console.WriteLine($"{studentCourseItem.FirstName} {studentCourseItem.LastName} has course : {studentCourseItem.CourseName}");
 }
 
-//Console.Write("".PadLeft(49, '-'));
-//Console.Write("Teachers");
-//Console.WriteLine("".PadLeft(49, '-'));
+Console.Write("".PadLeft(49, '-'));
+Console.Write("Teachers");
+Console.WriteLine("".PadLeft(49, '-'));
 
-//List<TeacherCourse> teacherCourses = leftouterJoinSample.TeacherCourseLeftouterJoin();
+List<TeacherCourse> teacherCourses = leftouterJoinSample.TeacherCourseLeftouterJoin();
 
-//foreach (TeacherCourse teacherCourseItem in teacherCourses)
-//{    
-//    Console.WriteLine($"{teacherCourseItem.FirstName} {teacherCourseItem.LastName} has course : {teacherCourseItem.CourseName}");
-//}
+foreach (TeacherCourse teacherCourseItem in teacherCourses)
+{
+    Console.WriteLine($"{teacherCourseItem.FirstName} {teacherCourseItem.LastName} has course : {teacherCourseItem.CourseName}");
+}
