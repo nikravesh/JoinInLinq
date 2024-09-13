@@ -1,3 +1,5 @@
+using Xunit;
+
 namespace LeftouterJoinSimulation.LeftouterJoinTests;
 
 public class UnitTest1
