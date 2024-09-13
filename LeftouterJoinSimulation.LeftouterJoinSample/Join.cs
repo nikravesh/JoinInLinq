@@ -1,22 +1,10 @@
-﻿using LeftouterJoinSimulation.LeftouterJoinSample.Data;
-using LeftouterJoinSimulation.LeftouterJoinSample.Models;
+﻿using LeftouterJoinSimulation.LeftouterJoinSample.Models;
 
 namespace LeftouterJoinSimulation.LeftouterJoinSample;
 public class Join
 {
-    private List<Student> _students;
-    private List<Teacher> _teachers;
-    private List<Course> _courses;
-
-    public Join()
-    {
-        _students = SeedData.GetStudents();
-        _teachers = SeedData.GetTeachers();
-        _courses = SeedData.GetCourses();
-    }
-
-    public List<StudentCourse> StudentLeftouterJoin() =>
-        _students.GroupJoin(_courses, s => s.CourseId, c => c.Id, (s, c) =>
+    public List<StudentCourse> StudentLeftouterJoin(List<Student> students, List<Course> courses) =>
+        students.GroupJoin(courses, s => s.CourseId, c => c.Id, (s, c) =>
             new
             {
                 s.Id,
@@ -36,8 +24,8 @@ public class Join
                 };
             }).ToList();
 
-    public List<TeacherCourse> TeacherCourseLeftouterJoin() =>
-        _teachers.GroupJoin(_courses, t => t.CourseId, c => c.Id, (t, c) =>
+    public List<TeacherCourse> TeacherCourseLeftouterJoin(List<Teacher> teachers, List<Course> courses) =>
+        teachers.GroupJoin(courses, t => t.CourseId, c => c.Id, (t, c) =>
         new
         {
             t.Id,

@@ -23,4 +23,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LeftouterJoinSimulation.LeftouterJoinSample\LeftouterJoinSimulation.LeftouterJoinSample.csproj" />
+  </ItemGroup>
+
 </Project>
