@@ -3,7 +3,7 @@ using LeftouterJoinSimulation.LeftouterJoinSample.Models;
 
 namespace LeftouterJoinSimulation.LeftouterJoinTests;
 
-public class LeftouterJoinTestsMotherObject
+public class JoinTestsMotherObject
 {
     public static Join JoinInstance=>new();
 
