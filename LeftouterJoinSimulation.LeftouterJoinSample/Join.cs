@@ -56,8 +56,14 @@ public class Join
             };
         }).ToList();
 
-    public List<StudentCourse> TeacherInnerJoin(List<Teacher> teachers, List<Course> courses)
-    {
-        throw new NotImplementedException();
-    }
+    public List<TeacherCourse> TeacherInnerJoin(List<Teacher> teachers, List<Course> courses) =>
+        teachers.Join(courses, t => t.CourseId, c => c.Id, (t, c) =>
+        new TeacherCourse
+        {
+            Id = t.Id,
+            CourseId = t.CourseId,
+            FirstName = t.FirstName,
+            LastName = t.LastName,
+            CourseName = c.CourseName
+        }).ToList();
 }
