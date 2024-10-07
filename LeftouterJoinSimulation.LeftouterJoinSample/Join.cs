@@ -24,6 +24,17 @@ public class Join
                 };
             }).ToList();
 
+    public List<StudentCourse> StudentInnerJoin(List<Student> students, List<Course> courses) =>
+        students.Join(courses, s => s.CourseId, c => c.Id, (s, c) =>
+            new StudentCourse
+            {
+                Id = s.Id,
+                CourseId = s.CourseId,
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                CourseName = c.CourseName
+            }).ToList();
+
     public List<TeacherCourse> TeacherCourseLeftouterJoin(List<Teacher> teachers, List<Course> courses) =>
         teachers.GroupJoin(courses, t => t.CourseId, c => c.Id, (t, c) =>
         new
@@ -44,4 +55,9 @@ public class Join
                 CourseName = c?.CourseName ?? "-----"
             };
         }).ToList();
+
+    public List<StudentCourse> TeacherInnerJoin(List<Teacher> teachers, List<Course> courses)
+    {
+        throw new NotImplementedException();
+    }
 }

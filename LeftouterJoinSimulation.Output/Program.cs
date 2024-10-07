@@ -1,8 +1,9 @@
 ﻿using LeftouterJoinSimulation.LeftouterJoinSample;
+using LeftouterJoinSimulation.LeftouterJoinSample.Data;
 using LeftouterJoinSimulation.LeftouterJoinSample.Models;
 
 Join leftouterJoinSample = new();
-List<StudentCourse> studentCourse = leftouterJoinSample.StudentLeftouterJoin();
+List<StudentCourse> studentCourse = leftouterJoinSample.StudentLeftouterJoin(SeedData.GetStudents(),SeedData.GetCourses());
 
 Console.Write("".PadLeft(49, '-'));
 Console.Write("Students");
@@ -17,7 +18,7 @@ Console.Write("".PadLeft(49, '-'));
 Console.Write("Teachers");
 Console.WriteLine("".PadLeft(49, '-'));
 
-List<TeacherCourse> teacherCourses = leftouterJoinSample.TeacherCourseLeftouterJoin();
+List<TeacherCourse> teacherCourses = leftouterJoinSample.TeacherCourseLeftouterJoin(SeedData.GetTeachers(), SeedData.GetCourses());
 
 foreach (TeacherCourse teacherCourseItem in teacherCourses)
 {
